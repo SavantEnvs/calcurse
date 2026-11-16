@@ -1,0 +1,9 @@
+project: savantenvs/calcurse
+target: calcurse_conf
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/calcurse_conf/testsuite
+cmds:
+  - cmd: /mayhem/calcurse_conf @@
+    afl: true
+    timeout: 30
