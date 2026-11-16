@@ -1,0 +1,9 @@
+project: savantenvs/calcurse
+target: fuzz_ical
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_ical/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_ical
+    libfuzzer: true
+    timeout: 30
